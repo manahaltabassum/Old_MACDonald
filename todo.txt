@@ -1,0 +1,52 @@
+Clive J., Angela K., Manahal T. (Old_MACdonald)
+APCS1 pd5
+HW57 -- ...and Keeping it Pointed Up
+2017-01-10
+
+1. Create abstract superclass Card
+	a. Define its variables (name)
+	b. Define signatures for its abstract methods, play() and canPlay()
+		i. Play() will actually play the card. It is a void method.
+		ii. canPlay() will return a boolean in which true allows you to call Play() successfully
+2. Create class Number extending class 
+	a. Define private variables for Number (color, number)
+	b. Add overloaded constructor setting up color and number
+	c. Provide implementation for the abstract methods play(), canPlay() from Card
+	d. Specify a toString() method 
+3. Create class Player
+	a. Define its variables (name, inventory)
+	b. Define constructor Player() [comp]
+	d. Define draw() which will draw from the remaining pile and add to invetory
+	e. Define choose() to choose to play a card from a player's hand
+	f. Override toString() method to show Player current cards in hand
+4. Create driver class Woo
+	a. Define an array which will hold the number of players
+	b. Add two Players to the array
+	c. Define isEnd() //will return a boolean when the game is over (when someone has no cards)
+	d. Define play() //will keep incrementing a counter, and allowing the Player in that position of the array to play() while isEnd() = false
+	e. Play one round of Uno with only the Number Cards 
+	f. Fix until this can run (First-Working Version)
+5. Create classes Wild, Skip, Reverse, DrawTwo, and DrawFour extending Card
+	a. Provide implementation for the abstract methods play(), canPlay() from Card
+	b. Provide a toString() implementation of each
+	c. Class Wild:
+		i. Define vars (color)
+		ii. Create a setColor(String) method which will set the color to an input that the player gives.
+	d. Class Skip:
+		i. Define vars (color)
+		ii. Provide overloaded constructor which will take String input to set color
+	e. Class Reverse:
+		i. Define instance vars (isOn?, color)
+		ii. Provide overloaded constructor with String input to set color
+	f. Class DrawTwo:
+		i. Define instance vars (color)
+		ii. Provide overloaded constructor with String input to set color
+		iii. Create method drawtwo(Player) making another player draw two cards
+	g. Class DrawFour:
+		i. Define instance vars (color)
+		ii. Create method setColor() allowing for the user to use terminal input to set color
+		iii. Create method drawfour(Player) making another player draw four cards
+6. Add setup() to Woo //will allow user to choose number of Players
+7. Implement the options of versing against the computer or multiple Players
+8. Run a few round of Uno with these new Cards
+9. Go back and do some cleaning up (for instance, having clear terminal outputs, having a welcome message)
