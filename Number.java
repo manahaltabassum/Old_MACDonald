@@ -19,4 +19,11 @@ public class Number extends Card{
     public num getNumber{
 	return number;
     }
+
+    public void play(){
+    }
+
+    public boolean canPlay(){
+    }
+
 }
