@@ -65,3 +65,18 @@ yyyy-mm-dd
 <Member> :: <Thing member did.>
 <Member> :: <Thing member did.>
 ==============================================================
+
+
+2017-01-09
+--------------------------------------------------------------
+All members :: Revise proposal according to feedback
+CJ :: UML for Woo.java
+AK :: UML for Player class
+MT :: UML for Cards class
+==============================================================
+
+2017-01-10
+--------------------------------------------------------------
+All members :: Worked on flowchart
+    	       Worked on todo.txt
+==============================================================
