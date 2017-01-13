@@ -1,6 +1,8 @@
+import java.util.ArrayList;
+
 public class Player{
     public String name;
-    public ArrayList inventory;
+    public ArrayList<Number> inventory;
     
     //default constructor; pre-sets name for Player vs. computer rounds
     public Player(){
@@ -8,9 +10,9 @@ public class Player{
 	ArrayList<Number> inventory = new ArrayList<Number>();
     }
     //overloaded constructor; takes Player input to set name
-    public Player(mingzi){
+    public Player(String mingzi){
 	name = mingzi;
-	ArrayList<Number> inventory = new ArrayList<Number>();
+	inventory = new ArrayList<Number>();
     }
 
     public void draw(){
@@ -18,7 +20,7 @@ public class Player{
 	
     }
     //void choose(int index): using canPlay in canPlay boolean method from Number (Card subclass), determines whether to choose and place the chosen Card, choice, on the pile in Woo.java (by replacing topCard with choice), or not
-    public void choose(int index){
+    /*** public void choose(int index){
 	Number choice = inventory.get(index);
 	if (choose.canPlay(choice)){
 	    inventory.remove(index);
@@ -31,6 +33,6 @@ public class Player{
 
     //public String toString(){
 	
-	// }
+    // }***/
 }
 
