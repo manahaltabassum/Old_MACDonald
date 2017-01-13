@@ -19,4 +19,20 @@ public class Number extends Card{
     public num getNumber{
 	return number;
     }
+
+    public boolean canPlay() {
+	return ((color.equals(topCard.color)) && (number == topCard.number));
+    }//end canPlay()
+
+    public String toString() {
+	System.out.println("Color: " + color);
+	System.out.println("Number: " + number);
+    }//end toString()
+
+    public void play() {
+	if (this.canPlay()) {
+	    topCard = this;
+    }//end play()
+	
+	
 }
