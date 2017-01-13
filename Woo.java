@@ -23,8 +23,8 @@ public class Woo {
     //setups the game
     public static void setup() {
 	System.out.println("THIS IS UNO");
-	users = new Player[2];
+	users = new Player[1];
 	users[0] = new Player("tester0");
-	users[1] = new Player("tester1");
+	users[0].
     }//end setup()
    

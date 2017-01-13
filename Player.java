@@ -1,6 +1,6 @@
 public class Player{
-    private String name;
-    private ArrayList cardInventory;
+    public String name;
+    public ArrayList cardInventory;
 
     //default constructor; pre-sets name for Player vs. computer rounds
     public Player(){
