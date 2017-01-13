@@ -72,6 +72,17 @@ AK :: Copied devlog template into devlog.txt
 --------------------------------------------------------------
 AK :: Worked on Player.java
       -- added default constructor, overloaded constructor, and choose
-
+      Updated devlog
+      Updated UML diagram
+MT :: Worked on Card.java
+      -- made Card abstract, added instance vars, wrote abstract methods
+      Worked on Number.java 
+      -- added instance vars, overloaded constructor
+      Updated UML diagram
+      Updated devlog
+CJ :: Worked on Woo.java
+      -- added instance vars, setup(), game(), and main method
+      Worked on Number.java
+      -- implemented toString(), play(), and canPlay() methods
 ==============================================================
 
