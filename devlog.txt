@@ -80,6 +80,7 @@ MT :: Worked on Card.java
       -- added instance vars, overloaded constructor
       Updated UML diagram
       Updated devlog
+      Updated flowchart
 CJ :: Worked on Woo.java
       -- added instance vars, setup(), game(), and main method
       Worked on Number.java
