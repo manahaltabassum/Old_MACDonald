@@ -99,3 +99,4 @@ CJ :: Created Deck.java
       Updated Player.java
       —- modified draw() to work with Deck.java
       Updated devlog
+AK :: Created Reverse.java, Skip.java

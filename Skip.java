@@ -17,4 +17,10 @@ public class Skip extends Card{
 	    order++;
 	}
     }
+
+    public String toString(){
+	String retStr = "";
+	retStr += "Skipped~";
+	return retStr;
+    }
 }

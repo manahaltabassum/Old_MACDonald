@@ -17,4 +17,10 @@ public class Reverse extends Card{
 	    Woo.setDirection(-1);
 	}
     }
+
+    public String toString(){
+	String retStr = "";
+	retStr = "Reverse, reverse!";
+	return retStr;
+    }
 }//end Reverse
