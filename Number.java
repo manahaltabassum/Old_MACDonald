@@ -37,7 +37,7 @@ public class Number extends Card{
 	    System.out.println("\nSuccess! The new top card is:" + Woo.topCard);
 	}
 	else {
-	    System.out.println("Failure! You can redeem yourself later!");
+	    System.out.println("Cannot play card. Try a different card");
 	}
 	
     }//end play()
