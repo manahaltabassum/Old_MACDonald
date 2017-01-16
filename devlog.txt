@@ -87,3 +87,8 @@ CJ :: Worked on Woo.java
       -- implemented toString(), play(), and canPlay() methods
 ==============================================================
 
+2017-01-16
+--------------------------------------------------------------
+MT :: Worked on Wild.java, DrawTwo.java, & DrawFour.java
+      -- added instance var, implemented abstract methods, added toString
+      Updated devlog
