@@ -7,16 +7,33 @@ public class Woo {
     private int order;
 
     //keeps track of which Card is on top of the play pile
-    public Number topCard;
+    private Number topCard;
 
     //an array of all the Players (in order)
     private Player[] users;
 
     public Woo() {
-	isForward = true;
+	direction = 1;
 	order = 0;
+	setup();
+	game();
 	//topCard = RANDOM CARD FROM THE DECK, REMOVE THAT CARD FROM THE DECK
-
+	}
+	
+	//mutator and accessor for direction (later on for reverse)
+	public void setDirection(int dir){
+		direction = dir;
+	}
+	
+	public int getDirection(){
+		return direction;
+	}
+	
+	//accessor for topCard
+	public Number getTopCard(){
+		return topCard;
+	}
+	
     //setups the game
     public void setup() {
 	System.out.println("Welcome to UNO");
@@ -53,12 +70,15 @@ public class Woo {
     //returns true when any Player has fewer than 1 Cards in their cardInventory
     //this means the  game is over
      public boolean gameOver() {
+		 boolean over = true;
 	 for (Player i : users) {
-	     if (i.cardInventory.size() < 1) {
-		 return true;
-	     }}
+	     if (i.inventory.size() < 1) {
+		 over = true;
+	     }
+		}
+		return over;
     }//end gameOver()
-
+	
     public void game() {
 	Player playing;
 	
@@ -79,9 +99,9 @@ public class Woo {
 	    }//end game
 	***/
 
-	while (!(gameOver()) {
-		order += direction;
-		playing = user[order];
+	while (!(gameOver())) {
+		order += getDirection();
+		playing = users[order];
 		System.out.println("It is " + playing.name + "'s turn. What do you want to do? ");
 		System.out.println("0... View your Cards");
 		System.out.println("1... Play a Card");
@@ -91,18 +111,20 @@ public class Woo {
 		if (option == 0) {
 		    //do something
 		}
-		if else (option == 1) {
+		else if(option == 1) {
 			//do something else
 		    }
 
-		else {
-		    //do something
+			else {
+				//do something
+			}
 		}
-		    
+	}//end game()
+	
     public static void main(String[] args) {
 	Woo gameOfUNO = new Woo();
-	Woo.setup();
-	Woo.game();
+	//Woo.setup();
+	//Woo.game();
     }//end main()
 	
 	
@@ -110,4 +132,3 @@ public class Woo {
 	    
 	    
 }//end class Woo
-   
