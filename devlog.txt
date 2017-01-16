@@ -100,3 +100,8 @@ CJ :: Created Deck.java
       —- modified draw() to work with Deck.java
       Updated devlog
 AK :: Created Reverse.java, Skip.java
+      -- added instance vars, implemented abstract methods, added toString
+      Updated Woo.java
+      -- added accessor and mutator for direction
+      Updated devlog
+==============================================================
