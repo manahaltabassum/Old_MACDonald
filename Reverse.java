@@ -13,6 +13,8 @@ public class Reverse extends Card{
     }
 
     public void play(){
-	Woo.setDirection(-1);
+	if(canPlay()){
+	    Woo.setDirection(-1);
+	}
     }
 }//end Reverse
