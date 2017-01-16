@@ -22,6 +22,12 @@ public class DrawTwo extends Card{
 	else {
 	    System.out.println("Cannot play card. Try a different card");
 	}
-    }
+    }//end play()
+
+    public String toString(){
+	String retStr = "";
+	retStr += "DrawTwo, " + "Color " + color + "\n";
+	return retStr;
+    }//end toString()
 }
     
