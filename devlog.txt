@@ -92,3 +92,10 @@ CJ :: Worked on Woo.java
 MT :: Worked on Wild.java, DrawTwo.java, & DrawFour.java
       -- added instance var, implemented abstract methods, added toString
       Updated devlog
+CJ :: Created Deck.java
+      —- populated vars with Cards
+      Updated Woo.java
+      —- modify it to use non-static variables, work on setup()
+      Updated Player.java
+      —- modified draw() to work with Deck.java
+      Updated devlog
