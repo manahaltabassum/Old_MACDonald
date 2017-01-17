@@ -2,7 +2,7 @@ public class Reverse extends Card{
 
     //overloaded constructor
     public Reverse(String colour){
-	color = colour
+	color = colour;
     }
 
     public boolean canPlay(){
