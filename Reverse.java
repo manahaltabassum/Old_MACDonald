@@ -1,8 +1,5 @@
 public class Reverse extends Card{
 
-    //inst vars
-    private String color;
-
     //overloaded constructor
     public Reverse(String colour){
 	color = colour

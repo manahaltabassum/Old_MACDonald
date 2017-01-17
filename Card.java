@@ -2,6 +2,7 @@ public abstract class Card {
 
     //instance vars
     protected String name;
+    protected String color;
 
     //abstract method in order to Play a card
     public abstract void play();

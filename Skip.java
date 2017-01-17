@@ -1,8 +1,5 @@
 public class Skip extends Card{
 
-    //inst vars
-    private String color;
-
     //overloaded constructor
     public Skip(String colour){
 	color = colour;

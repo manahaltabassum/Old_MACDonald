@@ -1,8 +1,5 @@
 public class DrawFour extends Card{
 
-    //instance vars
-    private String color;
-
     public void setColor (String newColor){
 	color = newColor;
     }

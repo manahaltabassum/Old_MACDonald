@@ -1,8 +1,5 @@
 public class DrawTwo extends Card{
 
-    //instance vars
-    private String color;
-
     //overloaded constructor
     public DrawTwo (String col){
 	color = col;
