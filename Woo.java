@@ -1,16 +1,16 @@
 public class Woo {
 
     //1 if the order has not been reversed, -1 otherwise
-    private static int direction = 1;
+    public static int direction = 1;
 
     //keeps track of which Player gets to go next
-    private static int order = 0;
+    public static int order = 0;
 
     //keeps track of which Card is on top of the play pile
-    private static Number topCard = Deck.getNumber();
+    public static Card topCard = Deck.getNumber();
 
     //an array of all the Players (in order)
-    private static Player[] users;
+    public static Player[] users;
 	
     //switch the direction of the game (used when Reverse Card is played)
     public static void changeDirection {
