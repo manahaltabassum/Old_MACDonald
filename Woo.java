@@ -1,41 +1,33 @@
 public class Woo {
 
     //1 if the order has not been reversed, -1 otherwise
-    private int direction;
+    private static int direction = 1;
 
     //keeps track of which Player gets to go next
-    private int order;
+    private static int order = 0;
 
     //keeps track of which Card is on top of the play pile
-    private Number topCard;
+    private static Number topCard = Deck.getNumber();
 
     //an array of all the Players (in order)
-    private Player[] users;
-
-    public Woo() {
-	direction = 1;
-	order = 0;
-	setup();
-	game();
-	//topCard = RANDOM CARD FROM THE DECK, REMOVE THAT CARD FROM THE DECK
-	}
+    private static Player[] users;
 	
-	//mutator and accessor for direction (later on for reverse)
-	public void setDirection(int dir){
-		direction = dir;
-	}
+    //switch the direction of the game (used when Reverse Card is played)
+    public static void changeDirection {
+	direction *= -1;
+    }
 	
-	public int getDirection(){
-		return direction;
-	}
+    public static int getDirection(){
+	return direction;
+    }
 	
-	//accessor for topCard
-	public Number getTopCard(){
-		return topCard;
-	}
+    //accessor for topCard
+    public static Number getTopCard(){
+	return topCard;
+    }
 	
     //setups the game
-    public void setup() {
+    public static void setup() {
 	System.out.println("Welcome to UNO");
 	
 	System.out.print("How many players will be playing? ");
@@ -55,76 +47,67 @@ public class Woo {
 	    for (int q = 0; i < 7; q++) {
 		users[i].draw();
 	    }
-	}
-	
-	//possible tester data			  
-	/***
-	    users[0].inventory.add(new Number("Green", 7));
-	    users[0].inventory.add(new Number("Blue", 9));
-	    users[0].inventory.add(new Number("Green", 6));
-	    users[0].inventory.add(new Number("Red", 6));
-	***/
+	}		  
 
     }//end setup
 
     //returns true when any Player has fewer than 1 Cards in their cardInventory
     //this means the  game is over
-     public boolean gameOver() {
-		 boolean over = true;
-	 for (Player i : users) {
-	     if (i.inventory.size() < 1) {
-		 over = true;
-	     }
-		}
-		return over;
+    public static boolean gameOver() {
+	boolean over = true;
+	for (Player i : users) {
+	    if (i.inventory.size() < 1) {
+		over = true;
+	    }
+	}
+	return over;
     }//end gameOver()
 	
-    public void game() {
+    public staic void game() {
 	Player playing;
 	
 	
 	/*** FROM MVP - not sure if we will actually need it
-	    System.out.println("Here are your cards:");
-	    for (int i = 0; i < users[0].inventory.size(); i++) {
-	    System.out.println("-------------");
-	    System.out.println("Card #" + i);
-	    System.out.println(users[0].inventory.get(i));
-	    System.out.println("-------------");
-	    }
-	    System.out.println("Here is the top card");
-	    System.out.println(topCard);
-	    System.out.print("What Card do you want to play? Enter Card Number ");
-	    int a = Keyboard.readInt();
-	    users[0].inventory.get(a).play();
-	    }//end game
+	     System.out.println("Here are your cards:");
+	     for (int i = 0; i < users[0].inventory.size(); i++) {
+	     System.out.println("-------------");
+	     System.out.println("Card #" + i);
+	     System.out.println(users[0].inventory.get(i));
+	     System.out.println("-------------");
+	     }
+	     System.out.println("Here is the top card");
+	     System.out.println(topCard);
+	     System.out.print("What Card do you want to play? Enter Card Number ");
+	     int a = Keyboard.readInt();
+	     users[0].inventory.get(a).play();
+	     }//end game
 	***/
 
 	while (!(gameOver())) {
-		order += getDirection();
-		playing = users[order];
-		System.out.println("It is " + playing.name + "'s turn. What do you want to do? ");
-		System.out.println("0... View your Cards");
-		System.out.println("1... Play a Card");
-		//other options...
+	    order += getDirection();
+	    playing = users[order];
+	    System.out.println("It is " + playing.name + "'s turn. What do you want to do? ");
+	    System.out.println("0... View your Cards");
+	    System.out.println("1... Play a Card");
+	    //other options...
 
-		int option = Keyboard.readInt();
-		if (option == 0) {
-		    //do something
-		}
-		else if(option == 1) {
-			//do something else
-		    }
+	    int option = Keyboard.readInt();
+	    if (option == 0) {
+		//do something
+	    }
+	    else if(option == 1) {
+		//do something else
+	    }
 
-			else {
-				//do something
-			}
-		}
-	}//end game()
+	    else {
+		//do something
+	    }
+	}
+    }//end game()
 	
     public static void main(String[] args) {
-	Woo gameOfUNO = new Woo();
-	//Woo.setup();
-	//Woo.game();
+	setup();
+	game();
     }//end main()
 	
 	

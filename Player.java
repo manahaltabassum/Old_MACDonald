@@ -15,9 +15,13 @@ public class Player{
 	inventory = new ArrayList<Number>();
     }
 
-    //add a random Card from DECK to the caller's inventory
-    public void draw() {
-        return Deck.getCard();	
+    //add a random Card to the caller's inventory, returns it
+    public Card draw() {
+        Card a = Deck.getCard();
+	inventory.add(a);
+	return a;
+	
+	
     }//end draw()
     
     //void choose(int index): using canPlay in canPlay boolean method from Number (Card subclass), determines whether to choose and place the chosen Card, choice, on the pile in Woo.java (by replacing topCard with choice), or not

@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class Deck {
 
     // The sole purpose of Deck is to create a deck of standard UNO Cards
-    // Deck will be a static varaible used when Players draw() from it
+    // Provide methods to access a random Card or Number from this deck
     private static final ArrayList<Card> DECKOFCARDS = new ArrayList<Card>();
 
     private static final String[] COLORS = {"Red", "Green", "Yellow", "Blue"};
@@ -48,6 +48,12 @@ public class Deck {
     public static Card getCard() {
 	return DECKOFCARDS.get( (int) (Math.random() * 109));
     }//end getCard()
+
+    //return random Number from Deck
+    public static Number getNumber() {
+	return DECKOFCARDS.get( (int) (Math.random() * 77));
+    }//end getNumber()
+	    
 
 }//end class Deck
 	    
