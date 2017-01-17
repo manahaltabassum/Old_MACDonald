@@ -15,7 +15,7 @@ public class Number extends Card{
     //}
     
     //accesor method for number
-    public num getNumber{
+    public num getNumber(){
 	return number;
     }
 
