@@ -63,7 +63,7 @@ public class Woo {
 	return over;
     }//end gameOver()
 	
-    public staic void game() {
+    public static void game() {
 	Player playing;
 	
 	
