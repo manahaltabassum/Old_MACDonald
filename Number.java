@@ -1,11 +1,10 @@
 public class Number extends Card{
     
     //instance vars
-    private String color;
     private int number;
     
     //overloaded constructor
-    public Number(String col, int num){
+    public Number (String col, int num){
 	color = col;
 	number = num;
     }
@@ -16,7 +15,6 @@ public class Number extends Card{
     //}
     
     //accesor method for number
-<<<<<<< HEAD
     public num getNumber{
 	return number;
     }
@@ -28,7 +26,6 @@ public class Number extends Card{
     }
 
 }
-=======
     // public num getNumber{
     //	return number;
     // }
@@ -57,4 +54,3 @@ public class Number extends Card{
 	
 	
 }//end class Number
->>>>>>> 41c4a03253170a3c3e66bb30a4467992633ae1f0
