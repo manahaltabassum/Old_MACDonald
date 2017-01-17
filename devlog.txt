@@ -6,17 +6,6 @@ pd 5
 ---------------------
 The UNOfficial Game of UNO
 
-
-Suggested usage: 
-* Replace all fields, angle brackets included, with specified info.
-  eg, pd <pd#> --> pd 3
-* Delete these instructions once all teammates understand usage.
-
-devlog--
-Use keyboard shortcut to jump to end,
- replicate entry template,
- modify appropriately.
-
 zone of reflection--
 Flesh out each category whenever necessary, appropriate.
  Need not be fully filled in until end of project,
@@ -59,9 +48,60 @@ tales of wisdom gained...
 ==============================================================
 
 
-yyyy-mm-dd
+2017-01-09
 --------------------------------------------------------------
-<Member> :: <Thing member did.>
-<Member> :: <Thing member did.>
-<Member> :: <Thing member did.>
+All members :: Revise proposal according to feedback
+CJ :: UML for Woo.java
+AK :: UML for Player class
+MT :: UML for Cards class
+==============================================================
+
+2017-01-10
+--------------------------------------------------------------
+All members :: Worked on flowchart
+    	       Worked on todo.txt
+==============================================================
+
+2017-01-11
+--------------------------------------------------------------
+AK :: Copied devlog template into devlog.txt
+      Updated devlog
+==============================================================
+
+2017-01-12
+--------------------------------------------------------------
+AK :: Worked on Player.java
+      -- added default constructor, overloaded constructor, and choose
+      Updated devlog
+      Updated UML diagram
+MT :: Worked on Card.java
+      -- made Card abstract, added instance vars, wrote abstract methods
+      Worked on Number.java 
+      -- added instance vars, overloaded constructor
+      Updated UML diagram
+      Updated devlog
+      Updated flowchart
+CJ :: Worked on Woo.java
+      -- added instance vars, setup(), game(), and main method
+      Worked on Number.java
+      -- implemented toString(), play(), and canPlay() methods
+==============================================================
+
+2017-01-16
+--------------------------------------------------------------
+MT :: Worked on Wild.java, DrawTwo.java, & DrawFour.java
+      -- added instance var, implemented abstract methods, added toString
+      Updated devlog
+CJ :: Created Deck.java
+      —- populated vars with Cards
+      Updated Woo.java
+      —- modify it to use non-static variables, work on setup()
+      Updated Player.java
+      —- modified draw() to work with Deck.java
+      Updated devlog
+AK :: Created Reverse.java, Skip.java
+      -- added instance vars, implemented abstract methods, added toString
+      Updated Woo.java
+      -- added accessor and mutator for direction
+      Updated devlog
 ==============================================================
