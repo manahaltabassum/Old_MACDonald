@@ -28,7 +28,15 @@ public class Player{
     //returns true if the Card was played, false otherwise
     public boolean choose(int index){
 	Card choice = inventory.get(index);
-	choice.play();
+	if(choice.play()){
+	    Woo.topCard = choice;
+	    System.out.println("Success! The new top card is: " + Woo.topCard);
+	    return true;
+	}
+	else{
+	    System.out.println("Failure :( Choose again.")
+	    return false;
+	}
     }
 
     //public String toString(){
