@@ -39,14 +39,7 @@ public class Number extends Card{
     }//end toString()
 
     public void play() {
-	if (this.canPlay()) {
-	    Woo.topCard = this;
-	    System.out.println("\nSuccess! The new top card is:" + Woo.topCard);
-	}
-	else {
-	    System.out.println("Cannot play card. Try a different card");
-	}
-	
+	return this.canPlay();
     }//end play()
 	
 	
