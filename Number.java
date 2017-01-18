@@ -22,7 +22,7 @@ public class Number extends Card{
     //returns true if the calling Number can be played on top of topCard, false otherwise
     public boolean canPlay() {
 	//if topCard is a Number check that it has either the same color or number as calling Number
-	if (Woo.topCard instanceOf Number) {
+	if (Woo.topCard instanceof Number) {
 	    return (((color.equals(Woo.topCard.color)) || (number == Woo.topCard.number)));
 	}
 	//if top

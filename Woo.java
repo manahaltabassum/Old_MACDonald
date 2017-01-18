@@ -15,7 +15,7 @@ public class Woo {
     public static Player[] users;
 	
     //switch the direction of the game (used when Reverse Card is played)
-    public static void changeDirection {
+    public static void changeDirection() {
 	direction *= -1;
     }
 	
@@ -77,7 +77,7 @@ public class Woo {
 	    System.out.println("Here are your cards: ");
 	    for (int i = 0; i < playing.inventory.size(); i++) {
 		System.out.println("------------------------");
-		System.out.println("Card #" + i + ": " playing.inventory.get(i));
+		System.out.println("Card #" + i + ": " + playing.inventory.get(i));
 		System.out.println("------------------------");
 	    }
 
@@ -90,7 +90,7 @@ public class Woo {
 
 	    //give options to the user that will be seen every turn
 	    System.out.println("You can... ");
-	    System.out.println("0... Play a Card")
+	    System.out.println("0... Play a Card");
 	    System.out.println("1... Draw a Card");
 	    System.out.print("What would you like to do? ");
 

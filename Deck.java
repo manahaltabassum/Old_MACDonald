@@ -46,13 +46,13 @@ public class Deck {
 
     //returns random Card from Deck
     public static Card getCard() {
-	return DECKOFCARDS.get( (int) (Math.random() * (DECKOFCARDS.length + 1)))
+	return DECKOFCARDS.get( (int) (Math.random() * (DECKOFCARDS.size() + 1)));
     }//end getCard()
 
     //return random Number from Deck
     public static Number getNumber() {
 	Card a = getCard();
-	if (a instanceOf Number) {
+	if (a instanceof Number) {
 	    return a;}
 	else {
 	    return getNumber();
