@@ -105,3 +105,13 @@ AK :: Created Reverse.java, Skip.java
       -- added accessor and mutator for direction
       Updated devlog
 ==============================================================
+
+2017-01-17
+--------------------------------------------------------------
+CJ :: Worked on Woo
+      — worked on game(), making variables static
+      Worked on Player
+      — update choose() to work with game() in Woo
+      Worked on Number
+      — modified canPlay() so it will work if topCard is not a number
+
