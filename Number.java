@@ -38,7 +38,7 @@ public class Number extends Card{
 	return rtn;
     }//end toString()
 
-    public void play() {
+    public boolean play() {
 	return this.canPlay();
     }//end play()
 	
