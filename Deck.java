@@ -25,12 +25,12 @@ public class Deck {
 	    DECKOFCARDS.add(new DrawTwo(cardColor));
 
 	    //add Skip
-	    //DECKOFCARDS.add(new Skip(cardColor));
-	    // DECKOFCARDS.add(new Skip(cardColor));
+	    DECKOFCARDS.add(new Skip(cardColor));
+	    DECKOFCARDS.add(new Skip(cardColor));
 
 	    //add Reverse
-	    //DECKOFCARDS.add(new Reverse(cardColor));
-	    //DECKOFCARDS.add(new Reverse(cardColor));
+	    DECKOFCARDS.add(new Reverse(cardColor));
+	    DECKOFCARDS.add(new Reverse(cardColor));
 	}
 
 
@@ -46,12 +46,17 @@ public class Deck {
 
     //returns random Card from Deck
     public static Card getCard() {
-	return DECKOFCARDS.get( (int) (Math.random() * 109));
+	return DECKOFCARDS.get( (int) (Math.random() * (DECKOFCARDS.length + 1)))
     }//end getCard()
 
     //return random Number from Deck
     public static Number getNumber() {
-	return DECKOFCARDS.get( (int) (Math.random() * 77));
+	Card a = getCard();
+	if (a instanceOf Number) {
+	    return a;}
+	else {
+	    return getNumber();
+	}
     }//end getNumber()
 	    
 
