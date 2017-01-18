@@ -15,13 +15,9 @@ public class Number extends Card{
     //}
     
     //accesor method for number
-    public num getNumber(){
+    public int getNumber(){
 	return number;
     }
-
-    // public num getNumber{
-    //	return number;
-    // }
 
     public boolean canPlay() {
 	return ((color.equals(Woo.topCard.color)) || (number == Woo.topCard.number));
