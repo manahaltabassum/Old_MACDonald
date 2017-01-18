@@ -1,3 +1,5 @@
+import cs1.Keyboard;
+
 public class Woo {
 
     //1 if the order has not been reversed, -1 otherwise
@@ -39,7 +41,7 @@ public class Woo {
 	//populate users with all of the Players, and their names
 	for (int i = 0; i < numPlayers; i++) {
 	    System.out.println("Player" + i + ", what is your name? ");
-	    users[i] = new Player(Keyboard.readString());
+	    users[i] = new Player(readString());
 	}
 
 	//give every Player 7 random Cards from the Deck
@@ -65,33 +67,26 @@ public class Woo {
 	
     public static void game() {
 	Player playing;
-	
-	
-	/*** FROM MVP - not sure if we will actually need it
-	     System.out.println("Here are your cards:");
-	     for (int i = 0; i < users[0].inventory.size(); i++) {
-	     System.out.println("-------------");
-	     System.out.println("Card #" + i);
-	     System.out.println(users[0].inventory.get(i));
-	     System.out.println("-------------");
-	     }
-	     System.out.println("Here is the top card");
-	     System.out.println(topCard);
-	     System.out.print("What Card do you want to play? Enter Card Number ");
-	     int a = Keyboard.readInt();
-	     users[0].inventory.get(a).play();
-	     }//end game
-	***/
 
 	while (!(gameOver())) {
 	    order += getDirection();
 	    playing = users[order];
-	    System.out.println("It is " + playing.name + "'s turn. What do you want to do? ");
+	    System.out.println("It is " + playing.name + "'s turn!");
+
+	    //print out cards
+	    System.out.println("Here are your cards: ");
+	    for (int i = 0; i < playing.inventory.size(); i++) {
+		System.out.println("------------------------");
+		System.out.println("Card #" + i + ": " playing.inventory.get(i));
+		System.out.println("------------------------");
+	    }
+
+			     
 	    System.out.println("0... View your Cards");
 	    System.out.println("1... Play a Card");
 	    //other options...
 
-	    int option = Keyboard.readInt();
+	    int option = readInt();
 	    if (option == 0) {
 		//do something
 	    }
