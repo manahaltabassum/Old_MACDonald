@@ -19,8 +19,16 @@ public class Number extends Card{
 	return number;
     }
 
+    //returns true if the calling Number can be played on top of topCard, false otherwise
     public boolean canPlay() {
-	return ((color.equals(Woo.topCard.color)) || (number == Woo.topCard.number));
+	//if topCard is a Number check that it has either the same color or number as calling Number
+	if (Woo.topCard instanceOf Number) {
+	    return (((color.equals(Woo.topCard.color)) || (number == Woo.topCard.number)));
+	}
+	//if top
+	else {
+	    return (color.equals(Woo.topCard.color));
+	}
     }//end canPlay()
 
     public String toString() {
