@@ -3,6 +3,7 @@ public abstract class Card {
     //instance vars
     protected String name;
     protected String color;
+    protected int number;
 
     //abstract method in order to Play a card
     public abstract boolean play();
