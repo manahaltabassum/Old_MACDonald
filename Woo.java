@@ -24,7 +24,7 @@ public class Woo {
     }
 	
     //accessor for topCard
-    public static Number getTopCard(){
+    public static Card  getTopCard(){
 	return topCard;
     }
 	
@@ -41,7 +41,7 @@ public class Woo {
 	//populate users with all of the Players, and their names
 	for (int i = 0; i < numPlayers; i++) {
 	    System.out.println("Player" + i + ", what is your name? ");
-	    users[i] = new Player(readString());
+	    users[i] = new Player(Keyboard.readString());
 	}
 
 	//give every Player 7 random Cards from the Deck
@@ -95,14 +95,14 @@ public class Woo {
 	    System.out.print("What would you like to do? ");
 
 	    //take an action based on the user's input
-	    int option = readInt();
+	    int option = Keyboard.readInt();
 	    //user selected to play a Card
 	    if (option == 0) {
 	        System.out.print("Which card would you like to play? ");
 		//keep making player choose a card until they choose one that works
 		//add option later so that it won't crash if they don't have a card that works
 		while (true) {
-		    if (playing.choose(readInt())) {
+		    if (playing.choose(Keyboard.readInt())) {
 			break;
 		    }}
 	    }//end option for when user wants to play a card
