@@ -1,4 +1,4 @@
-Old MACdonald
+﻿Old MACdonald
 Clive Johnson
 Angela Kim
 Manahal Tabassum
@@ -114,4 +114,6 @@ CJ :: Worked on Woo
       — update choose() to work with game() in Woo
       Worked on Number
       — modified canPlay() so it will work if topCard is not a number
-
+MT :: Worked on the Card subclasses
+      -- worked on eliminating compile time errors in the Card subclasses
+      -- Fixed syntax in Number.java, DrawTwo.java, & DrawFour.java
