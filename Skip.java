@@ -9,9 +9,13 @@ public class Skip extends Card{
 	return color.equals(Woo.topCard.color);
     }
 
-    public void play(){
+    public boolean play(){
 	if(canPlay()){
 	    order++;
+	    return true;
+	}
+	else {
+	    return false;
 	}
     }
 
