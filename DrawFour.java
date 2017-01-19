@@ -8,7 +8,7 @@ public class DrawFour extends Card{
 	return true;
     }
 
-    public void play(){
+    public boolean play(){
 	if (this.canPlay()){
 	    System.out.println("Next player draws 4 cards.");
 	    Woo.users[Woo.order+1].draw();
@@ -20,9 +20,11 @@ public class DrawFour extends Card{
 	    String newCol = Keyboard.readString();
 	    this.setColor(newCol);
 
-	    Woo.topCard = this;
-	    System.out.println("Successfully changed color to " + newCol + " .");
+	    /*Woo.topCard = this;
+	      System.out.println("Successfully changed color to " + newCol + " .");*/
+	    return true;
 	}
+	return false;
     }//end play()
 
     public String toString(){
