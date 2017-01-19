@@ -11,7 +11,7 @@ public class Skip extends Card{
 
     public boolean play(){
 	if(canPlay()){
-	    order++;
+	    Woo.order++;
 	    return true;
 	}
 	else {
