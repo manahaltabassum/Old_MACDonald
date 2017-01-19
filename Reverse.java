@@ -9,9 +9,13 @@ public class Reverse extends Card{
 	return color.equals(Woo.topCard.color);
     }
 
-    public void play(){
+    public boolean play(){
 	if(canPlay()){
 	    Woo.changeDirection();
+	    return true;
+	}
+	else{
+	    return false;
 	}
     }
 
