@@ -53,7 +53,7 @@ public class Deck {
     public static Number getNumber() {
 	Card a = getCard();
 	if (a instanceof Number) {
-	    return a;}
+	    return (Number) a;}
 	else {
 	    return getNumber();
 	}
