@@ -21,7 +21,7 @@ public class Skip extends Card{
 
     public String toString(){
 	String retStr = "";
-	retStr += "Skipped~";
+	retStr += "Skip";
 	return retStr;
     }
 }
