@@ -46,7 +46,7 @@ public class Deck {
 
     //returns random Card from Deck
     public static Card getCard() {
-	return DECKOFCARDS.get( (int) (Math.random() * (DECKOFCARDS.size() + 1)));
+	return DECKOFCARDS.get( (int) (Math.random() * (DECKOFCARDS.size())));
     }//end getCard()
 
     //return random Number from Deck
