@@ -117,3 +117,7 @@ CJ :: Worked on Woo
 MT :: Worked on the Card subclasses
       -- worked on eliminating compile time errors in the Card subclasses
       -- Fixed syntax in Number.java, DrawTwo.java, & DrawFour.java
+AK :: Worked on Player
+      - fixed errors in Player
+      Fixed syntax in Woo, Deck
+==============================================================
