@@ -74,7 +74,7 @@ public class Woo {
 	Player playing;
 
 	while (!(gameOver())) {
-	    playing = users[order];
+	    playing = users[order % numPlayers];
 	    System.out.println("It is " + playing.name + "'s turn!");
 
 	    //print out cards
