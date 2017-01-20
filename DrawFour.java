@@ -11,10 +11,10 @@ public class DrawFour extends Card{
     public boolean play(){
 	if (this.canPlay()){
 	    System.out.println("Next player draws 4 cards.");
-	    Woo.users[Woo.order+1].draw();
-	    Woo.users[Woo.order+1].draw();
-	    Woo.users[Woo.order+1].draw();
-	    Woo.users[Woo.order+1].draw();
+	    Woo.users[(Woo.order+1)%(Woo.users.length)].draw();
+	    Woo.users[(Woo.order+1)%(Woo.users.length)].draw();
+	    Woo.users[(Woo.order+1)%(Woo.users.length)].draw();
+	    Woo.users[(Woo.order+1)%(Woo.users.length)].draw();
 
 	    System.out.println("What color would you like to play?");
 	    String newCol = Keyboard.readString();
