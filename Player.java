@@ -39,8 +39,12 @@ public class Player{
 	}
     }
 
-    //public String toString(){
-	
-    // }***/
+    public String toString(){
+	String retStr = "";
+	for(Card x : inventory){
+	    retStr += x.toString() + "\n";
+	}
+	return retStr;
+     }
 }
 
