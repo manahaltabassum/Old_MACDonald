@@ -34,7 +34,7 @@ public class Player{
 	    return true;
 	}
 	else{
-	    System.out.println("Failure :( Choose again.");
+	    System.out.print("Failure :( Choose again: ");
 	    return false;
 	}
     }
