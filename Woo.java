@@ -40,7 +40,7 @@ public class Woo {
 
 	//populate users with all of the Players, and their names
 	for (int i = 0; i < numPlayers; i++) {
-	    System.out.println("Player" + i + ", what is your name? ");
+	    System.out.println("Player " + (i+1) + ", what is your name? ");
 	    users[i] = new Player(Keyboard.readString());
 	}
 
