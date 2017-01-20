@@ -74,7 +74,6 @@ public class Woo {
 	Player playing;
 
 	while (!(gameOver())) {
-	    order += getDirection();
 	    playing = users[order];
 	    System.out.println("It is " + playing.name + "'s turn!");
 
@@ -116,6 +115,7 @@ public class Woo {
 	    else {
 		//implementation
 	    }
+	    order += getDirection();
 	}//end while loop
 	
     }//end game()
