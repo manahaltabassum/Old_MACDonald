@@ -42,14 +42,20 @@ public class Woo {
 	for (int i = 0; i < numPlayers; i++) {
 	    System.out.println("Player " + (i+1) + ", what is your name? ");
 	    users[i] = new Player(Keyboard.readString());
+	    //System.out.println("test");
 	}
+	//System.out.println("testt2");
 
 	//give every Player 7 random Cards from the Deck
 	for (int i = 0; i < numPlayers; i++) {
-	    for (int q = 0; i < 7; q++) {
+	    for (int q = 0; q < 7; q++) {
 		users[i].draw();
+		//System.out.println("draw done");
 	    }
-	}		  
+	}
+	//for (Player i : users) {
+	//System.out.println(i);}
+		
 
     }//end setup
 
