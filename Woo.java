@@ -62,13 +62,12 @@ public class Woo {
     //returns true when any Player has fewer than 1 Cards in their cardInventory
     //this means the  game is over
     public static boolean gameOver() {
-	boolean over = true;
 	for (Player i : users) {
 	    if (i.inventory.size() < 1) {
-		over = true;
+		return true;
 	    }
 	}
-	return over;
+	return false;
     }//end gameOver()
 	
     public static void game() {
