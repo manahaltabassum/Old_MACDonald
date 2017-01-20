@@ -12,8 +12,8 @@ public class DrawTwo extends Card{
     public boolean play(){
 	if (this.canPlay()){
 	    //Woo.topCard = this;
-	    Woo.users[Woo.order+1].draw();
-	    Woo.users[Woo.order+1].draw();
+	    Woo.users[(Woo.order+1)%(Woo.users.length)].draw();
+	    Woo.users[(Woo.order+1)%(Woo.users.length)].draw();
 	    System.out.println("Played a Draw Two card. Next player draws two cards.");
 	    return true;
 	}
