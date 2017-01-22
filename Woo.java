@@ -3,7 +3,7 @@ import cs1.Keyboard;
 public class Woo {
 
     //1 if the order has not been reversed, -1 otherwise
-    public static int direction = 1;
+    private static int direction = 1;
 
     //keeps track of which Player gets to go next
     public static int order = 0;
@@ -75,50 +75,100 @@ public class Woo {
 
 	while (!(gameOver())) {
 	    playing = users[order % users.length];
-	    System.out.println("It is " + playing.name + "'s turn!");
+	    System.out.println("\nIt is " + playing.name + "'s turn!");
 
 	    //print out cards
 	    System.out.println("Here are your cards: ");
+	    System.out.println("------------------------\n");
 	    for (int i = 0; i < playing.inventory.size(); i++) {
-		System.out.println("------------------------");
-		System.out.println("Card #" + i + ": " + playing.inventory.get(i));
-		System.out.println("------------------------");
+		System.out.println("Card #" +  (i+1) + ": " + playing.inventory.get(i));
 	    }
+	    System.out.println("\n------------------------");
 
 	    //print out topCard
 	    System.out.println("Here is the card on top of the pile: ");
 	    System.out.println("------------------------");
 	    System.out.println(topCard);
 	    System.out.println("------------------------");
-	    
+	  
+	    //true if the user has anycards that can be played, false if none of their cards can be
+	    boolean canPlayACard = false;
 
+	    //assigns correct value to canPlayACard
+	    for (Card i : playing.inventory) {
+		if (i.canPlay()) {
+		    canPlayACard = true;
+		    break;
+		}
+	    }
 	    //give options to the user that will be seen every turn
 	    System.out.println("You can... ");
-	    System.out.println("0... Play a Card");
+
 	    System.out.println("1... Draw a Card");
+	    //if user has at least one card that can be played, give them that option
+	    if (canPlayACard) {
+		    System.out.println("2... Play a Card");
+	    }
 	    System.out.print("What would you like to do? ");
 
 	    //take an action based on the user's input
-	    int option = Keyboard.readInt();
-	    //user selected to play a Card
-	    if (option == 0) {
-	        System.out.print("Which card would you like to play? ");
-		//keep making player choose a card until they choose one that works
-		//add option later so that it won't crash if they don't have a card that works
-		while (true) {
-		    if (playing.choose(Keyboard.readInt())) {
-			break;
-		    }}
-	    }//end option for when user wants to play a card
+	    String option = Keyboard.readString();
+
+	    if (isInt(option)){
+		    //user selected to play a Card
+		    if (Integer.parseInt(option) == 2) {
+			System.out.print("Which card would you like to play? ");
+			//keep making player choose a card until they choose one that works
+			while (true) {
+			    if (playing.choose(Keyboard.readInt()-1)) {
+				    break;
+			    }
+			}
+		    }//end option for when user wants to play a card
 	    
-	    //user selected to draw a card
-	    else {
-		//implementation
+		    //user selected to draw a card
+		    else if (Integer.parseInt(option) == 1){
+			Card drawnCard = playing.draw();
+			System.out.println("You drew a " + drawnCard);
+			//if drawnCard can be played,, give user that option
+			if (drawnCard.canPlay()) {
+			    System.out.print("Would you like to play it? (y/n) ");
+			    if (Keyboard.readString().equals("y")) {
+				playing.choose(playing.inventory.size() - 1);
+			    }}}
+		}
+	    else if ((option.equals("Uno")) || (option.equals("uno"))){
+		if (playing.inventory.size() == 1){
+		    System.out.println("Succesfully declared Uno!");
+		}
+		else{
+		    System.out.println("Unsuccessful declaration of Uno. You must draw 2 cards.");
+		    playing.draw();
+		    playing.draw();
+		}
 	    }
 	    order += getDirection();
+	    //wait for one second
+	    try {
+		Thread.sleep(1000);
+	    } catch(InterruptedException ex) {
+		Thread.currentThread().interrupt();
+	    }
+
 	}//end while loop
 	
     }//end game()
+
+    public static boolean isInt(String str){
+	boolean isInteger = false;
+	try {
+	    Integer.parseInt(str);
+	    isInteger = true;
+	}
+	catch (NumberFormatException ex){
+	}
+	return isInteger;
+    }
 	
     public static void main(String[] args) {
 	setup();
