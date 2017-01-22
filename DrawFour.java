@@ -1,5 +1,9 @@
 public class DrawFour extends Card{
 
+    public DrawFour(){
+	color = "";
+    }
+    
     public void setColor (String newColor){
 	color = newColor;
     }
@@ -29,6 +33,7 @@ public class DrawFour extends Card{
 
     public String toString(){
 	String retStr = "";
+	retStr += color + " ";
 	retStr += "DrawFour";
 	return retStr;
     }//end toString()

@@ -32,9 +32,8 @@ public class Number extends Card{
     }//end canPlay()
 
     public String toString() {
-	String rtn = "\n";
-	rtn += "Color: " + color + "\n";
-        rtn += "Number: " + number;
+	String rtn = "";
+	rtn += color + " Number " + number;
 	return rtn;
     }//end toString()
 

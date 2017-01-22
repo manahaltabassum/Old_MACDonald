@@ -10,8 +10,8 @@ public class Player{
 	ArrayList<Card> inventory = new ArrayList<Card>();
     }
     //overloaded constructor; takes Player input to set name
-    public Player(String mingzi){
-	name = mingzi;
+    public Player(String setName){
+	name = setName;
 	inventory = new ArrayList<Card>();
     }
 
@@ -30,6 +30,7 @@ public class Player{
 	Card choice = inventory.get(index);
 	if(choice.play()){
 	    Woo.topCard = choice;
+	    inventory.remove(index);
 	    System.out.println("Success! The new top card is: " + Woo.topCard);
 	    return true;
 	}

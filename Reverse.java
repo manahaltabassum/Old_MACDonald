@@ -1,8 +1,8 @@
 public class Reverse extends Card{
 
     //overloaded constructor
-    public Reverse(String colour){
-	color = colour;
+    public Reverse(String setColor){
+	color = setColor;
     }
 
     public boolean canPlay(){
@@ -21,7 +21,7 @@ public class Reverse extends Card{
 
     public String toString(){
 	String retStr = "";
-	retStr = "Reverse, reverse!";
+	retStr = color + " Reverse";
 	return retStr;
     }
 }//end Reverse

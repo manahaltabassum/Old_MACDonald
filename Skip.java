@@ -1,8 +1,8 @@
 public class Skip extends Card{
 
     //overloaded constructor
-    public Skip(String colour){
-	color = colour;
+    public Skip(String setColor){
+	color = setColor;
     }
     
     public boolean canPlay(){
@@ -21,7 +21,7 @@ public class Skip extends Card{
 
     public String toString(){
 	String retStr = "";
-	retStr += "Skip";
+	retStr += color + " Skip";
 	return retStr;
     }
 }

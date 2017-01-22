@@ -1,8 +1,8 @@
 public class DrawTwo extends Card{
 
     //overloaded constructor
-    public DrawTwo (String col){
-	color = col;
+    public DrawTwo (String setColor){
+	color = setColor;
     }
 
     public boolean canPlay(){
@@ -25,7 +25,7 @@ public class DrawTwo extends Card{
 
     public String toString(){
 	String retStr = "";
-	retStr += "DrawTwo, " + "Color " + color + "\n";
+	retStr += color + " DrawTwo";
 	return retStr;
     }//end toString()
 }
