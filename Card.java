@@ -10,5 +10,9 @@ public abstract class Card {
     
     //abstract method in order to tell whether you can play a card
     public abstract boolean canPlay();
+	
+	public int getNumber(){
+		return number;
+	}
 
 }

@@ -14,7 +14,7 @@ public class Number extends Card{
     //	return color;
     //}
     
-    //accesor method for number
+    //accessor method for number
     public int getNumber(){
 	return number;
     }
@@ -23,7 +23,8 @@ public class Number extends Card{
     public boolean canPlay() {
 	//if topCard is a Number check that it has either the same color or number as calling Number
 	if (Woo.topCard instanceof Number) {
-	    return (((color.equals(Woo.topCard.color)) || (number == Woo.topCard.number)));
+	    //return (((color.equals(Woo.topCard.color)) || (number == Woo.topCard.number)));
+		return ((number == Woo.topCard.getNumber()) || (color.equals(Woo.topCard.color)));
 	}
 	//if top
 	else {
