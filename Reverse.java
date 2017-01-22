@@ -21,7 +21,7 @@ public class Reverse extends Card{
 
     public String toString(){
 	String retStr = "";
-	retStr = color + "Reverse";
+	retStr = color + " Reverse";
 	return retStr;
     }
 }//end Reverse

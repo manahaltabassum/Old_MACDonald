@@ -33,7 +33,7 @@ public class Number extends Card{
 
     public String toString() {
 	String rtn = "";
-	rtn += color + " number " + number;
+	rtn += color + " Number " + number;
 	return rtn;
     }//end toString()
 

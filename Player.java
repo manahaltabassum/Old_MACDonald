@@ -10,8 +10,8 @@ public class Player{
 	ArrayList<Card> inventory = new ArrayList<Card>();
     }
     //overloaded constructor; takes Player input to set name
-    public Player(String mingzi){
-	name = mingzi;
+    public Player(String setName){
+	name = setName;
 	inventory = new ArrayList<Card>();
     }
 

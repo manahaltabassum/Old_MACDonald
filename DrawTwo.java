@@ -25,7 +25,7 @@ public class DrawTwo extends Card{
 
     public String toString(){
 	String retStr = "";
-	retStr += color + " DrawTwo"
+	retStr += color + " DrawTwo";
 	return retStr;
     }//end toString()
 }

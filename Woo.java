@@ -90,21 +90,34 @@ public class Woo {
 	    System.out.println("------------------------");
 	    System.out.println(topCard);
 	    System.out.println("------------------------");
-	    
+	  
+	    //true if the user has anycards that can be played, false if none of their cards can be
+	    boolean canPlayACard = false;
 
+	    //assigns correct value to canPlayACard
+	    for (Card i : playing.inventory) {
+		if (i.canPlay()) {
+		    canPlayACard = true;
+		    break;
+		}
+	    }
 	    //give options to the user that will be seen every turn
 	    System.out.println("You can... ");
-	    System.out.println("1... Play a Card");
-	    System.out.println("2... Draw a Card");
+
+	    System.out.println("1... Draw a Card");
+	    //if user has at least one card that can be played, give them that option
+	    if (canPlayACard) {
+		    System.out.println("2... Play a Card");
+	    }
 	    System.out.print("What would you like to do? ");
 
 	    //take an action based on the user's input
-	    int option = Keyboard.readInt()-1;
+	    int option = Keyboard.readInt();
+	    
 	    //user selected to play a Card
-	    if (option == 0) {
+	    if (option == 2) {
 	        System.out.print("Which card would you like to play? ");
 		//keep making player choose a card until they choose one that works
-		//add option later so that it won't crash if they don't have a card that works
 		while (true) {
 		    if (playing.choose(Keyboard.readInt()-1)) {
 			break;
@@ -113,9 +126,22 @@ public class Woo {
 	    
 	    //user selected to draw a card
 	    else {
-		playing.draw();
-	    }
+		Card drawnCard = playing.draw();
+		System.out.println("You drew a " + drawnCard);
+		//if drawnCard can be played,, give user that option
+		if (drawnCard.canPlay()) {
+			System.out.print("Would you like to play it? (y/n) ");
+			if (Keyboard.readString().equals("y")) {
+			    playing.choose(playing.inventory.size() - 1);
+			}}}
 	    order += getDirection();
+	    //wait for one second
+	    try {
+		Thread.sleep(1000);
+	    } catch(InterruptedException ex) {
+		Thread.currentThread().interrupt();
+	    }
+
 	}//end while loop
 	
     }//end game()
