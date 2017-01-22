@@ -3,7 +3,7 @@ import cs1.Keyboard;
 public class Woo {
 
     //1 if the order has not been reversed, -1 otherwise
-    public static int direction = 1;
+    private static int direction = 1;
 
     //keeps track of which Player gets to go next
     public static int order = 0;
@@ -79,14 +79,14 @@ public class Woo {
 
 	    //print out cards
 	    System.out.println("Here are your cards: ");
+	    System.out.println("------------------------\n");
 	    for (int i = 0; i < playing.inventory.size(); i++) {
-		System.out.println("------------------------");
-		System.out.println("\n Card #" +  (i+1) + ": " + playing.inventory.get(i)+"\n");
-		System.out.println("------------------------");
+		System.out.println("Card #" +  (i+1) + ": " + playing.inventory.get(i));
 	    }
+	    System.out.println("\n------------------------");
 
 	    //print out topCard
-	    System.out.println("\n" + " \nHere is the card on top of the pile: ");
+	    System.out.println("Here is the card on top of the pile: ");
 	    System.out.println("------------------------");
 	    System.out.println(topCard);
 	    System.out.println("------------------------");
