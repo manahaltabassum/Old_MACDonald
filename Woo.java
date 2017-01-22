@@ -113,7 +113,7 @@ public class Woo {
 	    
 	    //user selected to draw a card
 	    else {
-		//implementation
+		playing.draw();
 	    }
 	    order += getDirection();
 	}//end while loop

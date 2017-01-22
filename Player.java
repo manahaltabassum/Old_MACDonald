@@ -30,6 +30,7 @@ public class Player{
 	Card choice = inventory.get(index);
 	if(choice.play()){
 	    Woo.topCard = choice;
+	    inventory.remove(index);
 	    System.out.println("Success! The new top card is: " + Woo.topCard);
 	    return true;
 	}
