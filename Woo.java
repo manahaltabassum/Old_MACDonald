@@ -75,18 +75,18 @@ public class Woo {
 
 	while (!(gameOver())) {
 	    playing = users[order % users.length];
-	    System.out.println("It is " + playing.name + "'s turn!");
+	    System.out.println("\nIt is " + playing.name + "'s turn!");
 
 	    //print out cards
 	    System.out.println("Here are your cards: ");
 	    for (int i = 0; i < playing.inventory.size(); i++) {
 		System.out.println("------------------------");
-		System.out.println("Card #" + i + ": " + playing.inventory.get(i));
+		System.out.println("\n Card #" +  (i+1) + ": " + playing.inventory.get(i)+"\n");
 		System.out.println("------------------------");
 	    }
 
 	    //print out topCard
-	    System.out.println("Here is the card on top of the pile: ");
+	    System.out.println("\n" + " \nHere is the card on top of the pile: ");
 	    System.out.println("------------------------");
 	    System.out.println(topCard);
 	    System.out.println("------------------------");
@@ -94,19 +94,19 @@ public class Woo {
 
 	    //give options to the user that will be seen every turn
 	    System.out.println("You can... ");
-	    System.out.println("0... Play a Card");
-	    System.out.println("1... Draw a Card");
+	    System.out.println("1... Play a Card");
+	    System.out.println("2... Draw a Card");
 	    System.out.print("What would you like to do? ");
 
 	    //take an action based on the user's input
-	    int option = Keyboard.readInt();
+	    int option = Keyboard.readInt()-1;
 	    //user selected to play a Card
 	    if (option == 0) {
 	        System.out.print("Which card would you like to play? ");
 		//keep making player choose a card until they choose one that works
 		//add option later so that it won't crash if they don't have a card that works
 		while (true) {
-		    if (playing.choose(Keyboard.readInt())) {
+		    if (playing.choose(Keyboard.readInt()-1)) {
 			break;
 		    }}
 	    }//end option for when user wants to play a card
