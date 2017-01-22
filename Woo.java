@@ -120,16 +120,10 @@ public class Woo {
 			System.out.print("Which card would you like to play? ");
 			//keep making player choose a card until they choose one that works
 			while (true) {
-			    String input = Keyboard.readString();
-			    if (isInt(input)){
-				if (playing.choose(Integer.parseInt(input)-1)) {
+			    if (playing.choose(Keyboard.readInt()-1)) {
 				    break;
-				}
 			    }
-			    else if (Keyboard.readString().equals("exit")){
-				playing.draw();
-				break;
-			    }}
+			}
 		    }//end option for when user wants to play a card
 	    
 		    //user selected to draw a card
