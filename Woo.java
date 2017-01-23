@@ -67,7 +67,8 @@ public class Woo {
 
     //clears terminal after one Player's turn (creds to Xin Yi Chen!)
     public static void clearScreen(){
-	System.out.printf("\033c");
+	System.out.print("\033[H\033[2J");
+	System.out.flush();
     }
 
     //returns true when any Player has fewer than 1 Cards in their cardInventory
