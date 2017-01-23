@@ -66,9 +66,9 @@ public class Woo {
     }//end setup
 
     //clears terminal after one Player's turn (creds to Xin Yi Chen!)
-    public static void clear(){
-	String clr = "printf\"033c\"";
-	System.out.println(clr);
+    public static void clearScreen(){
+	String cls = "printf\"033c\"";
+	System.out.println(cls);
     }
 
     //returns true when any Player has fewer than 1 Cards in their cardInventory
@@ -193,7 +193,7 @@ public class Woo {
 	    } catch(InterruptedException ex) {
 		Thread.currentThread().interrupt();
 	    }
-	    clear();
+	    clearScreen();
 	}//end while loop
 
 	declareWinner();
