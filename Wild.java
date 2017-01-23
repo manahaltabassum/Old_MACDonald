@@ -30,7 +30,7 @@ public class Wild extends Card{
 
     public String toString(){
 	String retStr = "";
-	retStr += color " ";
+	retStr += color + " ";
 	retStr += "Wild Card";
 	return retStr;
     }//end toString()
