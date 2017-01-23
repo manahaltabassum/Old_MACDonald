@@ -1,5 +1,9 @@
 public class Wild extends Card{
 
+    public Wild(){
+	color = "";
+    }
+
     public void setColor (String newColor){
 	color = newColor;
     }
@@ -26,6 +30,7 @@ public class Wild extends Card{
 
     public String toString(){
 	String retStr = "";
+	retStr += color " ";
 	retStr += "Wild Card";
 	return retStr;
     }//end toString()
