@@ -129,6 +129,7 @@ AK :: Worked on Player
 CJ :: Worked on Woo
       -fixed the wrapping around of user, other bug fixes
 AK :: Worked on Player
+	  -added toString()
 	  -got the last of errors in Player
 ==============================================================
 2017-01-22
@@ -140,6 +141,9 @@ CJ :: Worked on everything!! Wohhoo lots of fun
       -added ending in Woo
       -Bugss!!
 AK :: Fixed problem with matching numbers not being played
+	  Worked in Woo
+	  -finally, finally got clearScreen() to work (s/o to Xin Yi Chen for the heads-up, but the code didn't work for us)
+	  -fixed small errors/ syntax errors
 MT :: Worked in all classes
       -cleaning up regarding terminal output
       -added the call to Uno functionality

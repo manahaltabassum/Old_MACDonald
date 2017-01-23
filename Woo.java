@@ -65,7 +65,7 @@ public class Woo {
 
     }//end setup
 
-    //clears terminal after one Player's turn (creds to Xin Yi Chen!)
+    //clears terminal after one Player's turn
     public static void clearScreen(){
 	System.out.print("\033[H\033[2J");
 	System.out.flush();
