@@ -157,7 +157,7 @@ public class Woo {
 		}
 	    }
 	    order += getDirection();
-	    //wait for one second
+	    //wait for one second - code block taken from Stack Overflow
 	    try {
 		Thread.sleep(1000);
 	    } catch(InterruptedException ex) {
