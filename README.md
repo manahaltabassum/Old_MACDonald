@@ -17,3 +17,6 @@
 ######-Draw Two: When played, the next player draws two cards from the deck and is skipped.
 ######-Draw Four: When played, the next player draws four cards and is skipped. The player who put the card down also chooses the color of the next card.
 ######-Wild Card: When played, the player who put the card down chooses the color of the next card. The next player's turn is NOT skipped.
+
+#### *Something to keep in mind*
+######If a player has two cards and one can be played, they must type in "Uno," and then play their card. If they do not, they will draw two cards.
