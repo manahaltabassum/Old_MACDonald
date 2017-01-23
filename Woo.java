@@ -186,6 +186,13 @@ public class Woo {
 		    playing.draw();
 		}
 	    }
+	    
+	    if ((playing.inventory.size() == 1)&&(!(playing.uno))){
+		System.out.println("Did not declare uno. Must draw two cards.");
+		playing.draw();
+		playing.draw();
+	    }
+	    
 	    order += getDirection();
 	    //wait for one second - code block taken from Stack Overflow
 	    try {
