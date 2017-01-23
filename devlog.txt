@@ -1,4 +1,4 @@
-﻿Old MACdonald
+Old MACdonald
 Clive Johnson
 Angela Kim
 Manahal Tabassum
@@ -6,37 +6,36 @@ pd 5
 ---------------------
 The UNOfficial Game of UNO
 
-zone of reflection--
-Flesh out each category whenever necessary, appropriate.
- Need not be fully filled in until end of project,
- but best done as you go along.
-
-
 /////////// Zone of Reflection \\\\\\\\\\\
 ------------------------------------------
 OBSTACLES OVERCOME
+-We had lots of issues with variables in Woo. We wanted other classes and their methods to be able to access and mutate variables in Woo, but this wasn't working as we didn't know how to do this for an instance (unless the instance itself was passed as a variable in every method). To overcome this, we made Woo static, and this fixed all of those issues. We had the same issue for Deck, and also took advantage of static in the same way there. 
+-Another issue we had was with incremental development. Since there were so many different pieces to this project (like all the different types of Cards), any problem in one of those files made the other ways not compile. So, about half way through this adventure, we all just went through all these bugs, until we got everything to compile.
+-Early on, we had lots of merge issues. At school, this didn't happen because we were all together so we would make sure we were editing different files. But after these merge errors occurred a few times at home, we realized we needed better communication, so we started always updating each other on what we were doing, and those merge errors stopped happening.
+-We also had issues with the wrapping around action of the user array. Because of the Reverse Card, we were getting negative numbers, and numbers high than the array index. We thought % would do the trick, and it did for numbers higher than the array index. But it turns out that % is not modulo. It is just remainder, so it works differently for negative numbers. To fix this, we had to write our own modulo function.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-wow we so BOSS bc...
-
 UNRESOLVED ISSUES
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-blah blah pesky bug...
-maybe some of these will move into the Obs.Ovrcm section...
+-There is no room for a dumb user. If the user types in an invalid number at any point, their turn will either be skipped, or the game could crash. At the end, we realized to implement proper input handling would have taken a good amount of extra time, and we decided against doing it.
 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 COOL STUFF LEARNED
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-wow! oo!...
+-We were having an issue with all this data being printed out at once. We wanted to give the user some time to digest the data, so we consulted the intertubes, and found out about sleep(), which momentarily pauses the program for a certain amount of time. This is a useful method to know, as it gives the programmer more control over the output of data.
 
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 MID-DEVELOPMENT DESIGN CHANGES
+-We ended up making a separate Deck class, whose only purpose is to generate a deck, and then allow a random card to be drawn from it. Originally we were going to do this in Woo, and make it a static variable, but this kept Woo from getting too crowded, and its much more organized. Also, it allowed us to use only certain types of cards at times, which helped us with testing.
+-Originally, every Card was going to have its own play method. However, we realized that every single play method has some things in common, like making sure that card can be played, and then putting it on top of the deck, and removing it from the player's inventory. So we decided to make two methods. choose() handles all of those similarities, and then play() is where the unique aspect of each Card gets implemented. This decision of making two different methods saved us from having to type lots of the same lines in every single Card subclass.
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-we changed ___ to ___ bc...
+LESSONS LEARNED 
+-Use incremental development - it will save lots of time in the future
+-Keep in contact with team mates to avoid merge errors, and to make sure everyone knows what is going on
+-Make sure you know exactly what a method is doing when you use it (like %), because it might not be doing what you think it is
+-game() in Woo ended up being pretty lengthy, and probably hard to read. We should have made helper methods
+-Use descriptive comments (especially when working with other people) - but thankfully we were all pretty good with this
 
-LESSONS LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-tales of wisdom gained...
-||||||||||||||||||||||||||||||||||||||||||
-
-
 
  ______   ______   __   __   __       ______   _______     
 /_____/\ /_____/\ /_/\ /_/\ /_/\     /_____/\ /______/\    
@@ -121,3 +120,18 @@ AK :: Worked on Player
       - fixed errors in Player
       Fixed syntax in Woo, Deck
 ==============================================================
+2017-01-20
+--------------------------------------------------------------
+CJ :: Worked on Woo
+      -fixed the wrapping around of user, other bug fixes
+==============================================================
+2017-01-22
+CJ :: Worked on everything!! Wohhoo lots of fun
+      -modified toString() for all Cards
+      -fixed issue with modulo
+      -got rid of methods, variables we ended up not needing
+      -Added function to game() in Woo so that it would only give users certain options, and not allow them to keep picking wrong cards to play
+      -added ending in Woo
+      -Bugss!!
+==============================================================
+
