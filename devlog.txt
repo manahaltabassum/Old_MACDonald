@@ -15,7 +15,7 @@ OBSTACLES OVERCOME
 -We also had issues with the wrapping around action of the user array. Because of the Reverse Card, we were getting negative numbers, and numbers high than the array index. We thought % would do the trick, and it did for numbers higher than the array index. But it turns out that % is not modulo. It is just remainder, so it works differently for negative numbers. To fix this, we had to write our own modulo function.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 UNRESOLVED ISSUES
--There is no room for a dumb user. If the user types in an invalid number at any point, their turn will either be skipped, or the game could crash. At the end, we realized to implement proper input handling would have taken a good amount of extra time, and we decided against doing it.
+-There is no room for a dumb user. If the user types in an invalid number or even a String at any point, their turn will either be skipped, or the game could crash. At the end, we realized to implement proper input handling would have taken a good amount of extra time, and we decided against doing it.
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 COOL STUFF LEARNED
@@ -30,10 +30,11 @@ MID-DEVELOPMENT DESIGN CHANGES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 LESSONS LEARNED 
 -Use incremental development - it will save lots of time in the future
--Keep in contact with team mates to avoid merge errors, and to make sure everyone knows what is going on
+-Keep in contact with teammates to avoid merge errors, and to make sure everyone knows what is going on
 -Make sure you know exactly what a method is doing when you use it (like %), because it might not be doing what you think it is
 -game() in Woo ended up being pretty lengthy, and probably hard to read. We should have made helper methods
 -Use descriptive comments (especially when working with other people) - but thankfully we were all pretty good with this
+-Print lines are very helpful
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -124,6 +125,8 @@ AK :: Worked on Player
 --------------------------------------------------------------
 CJ :: Worked on Woo
       -fixed the wrapping around of user, other bug fixes
+AK :: Worked on Player
+	  -got the last of errors in Player
 ==============================================================
 2017-01-22
 CJ :: Worked on everything!! Wohhoo lots of fun
@@ -133,5 +136,6 @@ CJ :: Worked on everything!! Wohhoo lots of fun
       -Added function to game() in Woo so that it would only give users certain options, and not allow them to keep picking wrong cards to play
       -added ending in Woo
       -Bugss!!
+AK :: Fixed problem with matching numbers not being played
 ==============================================================
 
