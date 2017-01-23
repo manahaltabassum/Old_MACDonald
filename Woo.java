@@ -27,6 +27,12 @@ public class Woo {
     public static Card  getTopCard(){
 	return topCard;
     }
+
+    //modulo method
+    public static int mod(int a, int b) {
+	return ((a % b) + b) % b;
+    }
+	
 	
     //setups the game
     public static void setup() {
@@ -74,7 +80,8 @@ public class Woo {
 	Player playing;
 
 	while (!(gameOver())) {
-	    playing = users[order % users.length];
+	    //current player is the (order modulo users.length) index of users
+	    playing = users[mod(order, users.length)];
 	    System.out.println("\nIt is " + playing.name + "'s turn!");
 
 	    //print out cards

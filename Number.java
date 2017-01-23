@@ -24,7 +24,7 @@ public class Number extends Card{
 	//if topCard is a Number check that it has either the same color or number as calling Number
 	if (Woo.topCard instanceof Number) {
 	    //return (((color.equals(Woo.topCard.color)) || (number == Woo.topCard.number)));
-		return ((number == Woo.topCard.getNumber()) || (color.equals(Woo.topCard.color)));
+	    return ((number == ((Number) Woo.topCard).getNumber()) || (color.equals(Woo.topCard.color)));
 	}
 	//if top
 	else {

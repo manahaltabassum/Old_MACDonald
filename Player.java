@@ -4,11 +4,6 @@ public class Player{
     public String name;
     public ArrayList<Card> inventory;
     
-    //default constructor; pre-sets name for Player vs. computer rounds
-    public Player(){
-	name = "Computer";
-	ArrayList<Card> inventory = new ArrayList<Card>();
-    }
     //overloaded constructor; takes Player input to set name
     public Player(String setName){
 	name = setName;

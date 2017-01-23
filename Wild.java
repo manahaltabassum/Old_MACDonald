@@ -18,13 +18,14 @@ public class Wild extends Card{
 	if (this.canPlay()){
 	    
 	    System.out.println("What color would you like to play?");
-	    
+
 	    String str = "";
 	    str += "1... Red \n";
 	    str += "2... Yellow \n";
 	    str += "3... Green \n";
 	    str += "4... Blue \n";
-	    System.out.println(str);
+	    str += "Your choice: ";
+	    System.out.print(str);
 	    
 	    int newColnum = Keyboard.readInt();
 	    String newCol = "";
