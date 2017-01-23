@@ -67,7 +67,7 @@ public class Woo {
 
     //clears terminal after one Player's turn (creds to Xin Yi Chen!)
     public static void clearScreen(){
-	String cls = "printf\"033c\"";
+	String cls = "printf\"\033c\"";
 	System.out.println(cls);
     }
 
