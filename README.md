@@ -12,8 +12,8 @@
 >###### 4. Type ```java Woo```
 
 ## *Special Cards*
-*Reverse: When played, the order of the players will be reversed.
-*Skip: When played, the next player will be skipped.
-*Draw Two: When played, the next player draws two cards from the deck and is skipped.
-Draw Four: When played, the next player draws four cards and is skipped. The player who put the card down also chooses the color of the next card.
-Wild Card: When played, the player who put the card down chooses the color of the next card. The next player's turn is NOT skipped.
+######*Reverse: When played, the order of the players will be reversed.
+######*Skip: When played, the next player will be skipped.
+######*Draw Two: When played, the next player draws two cards from the deck and is skipped.
+######Draw Four: When played, the next player draws four cards and is skipped. The player who put the card down also chooses the color of the next card.
+######Wild Card: When played, the player who put the card down chooses the color of the next card. The next player's turn is NOT skipped.
