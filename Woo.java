@@ -89,8 +89,8 @@ public class Woo {
 	    System.out.println("Here is the card on top of the pile: ");
 	    System.out.println("------------------------");
 	    System.out.println(topCard);
-	    System.out.println("topCard");
-	    System.out.println(topCard.getNumber());
+	    //System.out.println("topCard");
+	    //System.out.println(topCard.getNumber());
 	    System.out.println("------------------------");
 	  
 	    //true if the user has anycards that can be played, false if none of their cards can be
