@@ -6,7 +6,7 @@ public class Skip extends Card{
     }
     
     public boolean canPlay(){
-	return color.equals(Woo.topCard.color);
+	return (color.equals(Woo.topCard.color) || (Woo.topCard instanceof Skip));
     }
 
     public boolean play(){

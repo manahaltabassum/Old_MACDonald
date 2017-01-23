@@ -17,7 +17,7 @@ OBSTACLES OVERCOME
 UNRESOLVED ISSUES
 -There is no room for a dumb user. If the user types in an invalid number or even a String at any point, their turn will either be skipped, or the game could crash. At the end, we realized to implement proper input handling would have taken a good amount of extra time, and we decided against doing it.
 -We had the problem of drawing a Card from Deck, and then modifying it (this only applies to Draw Fours and Wild Cards as they can be modified). Then, if it was drawn again, it would have that modification. To fix this, we just multiplied the size of the deck by a factor of 10. This makes drawing the same card twice much less likely. However, this obviously isn't an ideal fix. Ideally, we would have returned a copy of a Card each time Deck was drawn from, but we think this would have required lots of extra code.
-
+-The clear function does not work in Windows terminals
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 COOL STUFF LEARNED
 -We were having an issue with all this data being printed out at once. We wanted to give the user some time to digest the data, so we consulted the intertubes, and found out about sleep(), which momentarily pauses the program for a certain amount of time. This is a useful method to know, as it gives the programmer more control over the output of data.
