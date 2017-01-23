@@ -144,6 +144,8 @@ AK :: Fixed problem with matching numbers not being played
 	  Worked in Woo
 	  -finally, finally got clearScreen() to work (s/o to Xin Yi Chen for the heads-up, but the code didn't work for us)
 	  -fixed small errors/ syntax errors
+	  Worked on several Card subclasses
+	  -made sure same types can be played
 MT :: Worked in all classes
       -cleaning up regarding terminal output
       -added the call to Uno functionality
