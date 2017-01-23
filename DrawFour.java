@@ -49,7 +49,7 @@ public class DrawFour extends Card{
 	    /*Woo.topCard = this;
 	      System.out.println("Successfully changed color to " + newCol + " .");*/
 
-	    Woo.order += getDirection();
+	    Woo.order += Woo.getDirection();
 	    System.out.println(Woo.users[Woo.mod(Woo.order, Woo.users.length)].name + " has been skipped!");
 	    return true;
 	}
