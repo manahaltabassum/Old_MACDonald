@@ -77,7 +77,7 @@ public class Woo {
 	boolean winner = false;
 	for (int x = 0; x < users.length; x++){
 	    if ((users[x].inventory.size()==0)&&(users[x].uno)){
-		winner = false;
+		winner = true;
 	    }
 	}
 	return winner;
