@@ -65,6 +65,12 @@ public class Woo {
 
     }//end setup
 
+    //clears terminal after one Player's turn (creds to Xin Yi Chen!)
+    public static void clear(){
+	String clr = "printf\"033c\"";
+	System.out.println(clr);
+    }
+
     //returns true when any Player has fewer than 1 Cards in their cardInventory
     //this means the  game is over
     public static boolean gameOver() {
@@ -163,7 +169,7 @@ public class Woo {
 	    } catch(InterruptedException ex) {
 		Thread.currentThread().interrupt();
 	    }
-
+	    clear();
 	}//end while loop
 	
     }//end game()
