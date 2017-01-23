@@ -12,7 +12,7 @@ public class Skip extends Card{
     public boolean play(){
 	if(canPlay()){
 	    Woo.order++;
-	    System.out.println(Woo.users[order%users.size()] + " has been skipped!";
+	    System.out.println(Woo.users[Woo.order%Woo.users.length] + " has been skipped!");
 	    return true;
 	}
 	else {
