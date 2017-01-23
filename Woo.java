@@ -24,7 +24,7 @@ public class Woo {
     }
 	
     //accessor for topCard
-    public static Card  getTopCard(){
+    public static Card getTopCard(){
 	return topCard;
     }
 
@@ -74,12 +74,13 @@ public class Woo {
     //returns true when any Player has fewer than 1 Cards in their cardInventory
     //this means the  game is over
     public static boolean gameOver() {
-	for (Player i : users) {
-	    if (i.inventory.size() < 1) {
-		return true;
+	boolean winner = false;
+	for (int x = 0; x < users.length; x++){
+	    if ((users[x].inventory.size()==0)&&(users[x].uno)){
+		winner = false;
 	    }
 	}
-	return false;
+	return winner;
     }//end gameOver()
 	
     public static void game() {
@@ -133,6 +134,7 @@ public class Woo {
 		    //user selected to play a Card
 		    if (Integer.parseInt(option) == 2) {
 			System.out.print("Which card would you like to play? ");
+			
 			//keep making player choose a card until they choose one that works
 			while (true) {
 			    if (playing.choose(Keyboard.readInt()-1)) {
@@ -153,8 +155,30 @@ public class Woo {
 			    }}}
 		}
 	    else if ((option.equals("Uno")) || (option.equals("uno"))){
-		if (playing.inventory.size() == 1){
+		if ((playing.inventory.size() == 2)&& canPlayACard){
+		    System.out.println("Please choose a card to Play:  \n");
+		    System.out.println("Here are your cards: ");
+		    System.out.println("------------------------\n");
+		    for (int i = 0; i < playing.inventory.size(); i++) {
+			System.out.println("Card #" +  (i+1) + ": " + playing.inventory.get(i));
+		    }
+		    System.out.println("\n------------------------");
+
+		    //print out topCard
+		    System.out.println("Here is the card on top of the pile: ");
+		    System.out.println("------------------------");
+		    System.out.println(topCard);
+		    //System.out.println("topCard");
+		    //System.out.println(topCard.getNumber());
+		    System.out.println("------------------------");
+		    System.out.println("Which card would you like to play?");
+		    while (true) {
+			if (playing.choose(Keyboard.readInt()-1)) {
+			    break;
+			}
+		    }
 		    System.out.println("Succesfully declared Uno!");
+		    playing.uno = true;
 		}
 		else{
 		    System.out.println("Unsuccessful declaration of Uno. You must draw 2 cards.");
@@ -171,6 +195,8 @@ public class Woo {
 	    }
 	    clear();
 	}//end while loop
+
+	declareWinner();
 	
     }//end game()
 
@@ -184,14 +210,20 @@ public class Woo {
 	}
 	return isInteger;
     }
-	
+
+    public static void declareWinner(){
+	Player winner = new Player("temp");
+	for (int x = 0; x<users.length; x++){
+	    if ((users[x].uno) && (users[x].inventory.size() == 0)){
+		winner = users[x];
+	    }
+	}
+	System.out.println("Congratulations! " + winner.name + " is the winner!");
+    }
+    
     public static void main(String[] args) {
 	setup();
 	game();
     }//end main()
-	
-	
-	
-	    
-	    
+       	    
 }//end class Woo

@@ -3,11 +3,13 @@ import java.util.ArrayList;
 public class Player{
     public String name;
     public ArrayList<Card> inventory;
+    public boolean uno;
     
     //overloaded constructor; takes Player input to set name
     public Player(String setName){
 	name = setName;
 	inventory = new ArrayList<Card>();
+	uno = false;
     }
 
     //add a random Card to the caller's inventory, returns it
