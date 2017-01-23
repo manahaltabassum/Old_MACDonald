@@ -1,4 +1,4 @@
-Old MACdonald
+﻿Old MACdonald
 Clive Johnson
 Angela Kim
 Manahal Tabassum
@@ -27,6 +27,8 @@ COOL STUFF LEARNED
 MID-DEVELOPMENT DESIGN CHANGES
 -We ended up making a separate Deck class, whose only purpose is to generate a deck, and then allow a random card to be drawn from it. Originally we were going to do this in Woo, and make it a static variable, but this kept Woo from getting too crowded, and its much more organized. Also, it allowed us to use only certain types of cards at times, which helped us with testing.
 -Originally, every Card was going to have its own play method. However, we realized that every single play method has some things in common, like making sure that card can be played, and then putting it on top of the deck, and removing it from the player's inventory. So we decided to make two methods. choose() handles all of those similarities, and then play() is where the unique aspect of each Card gets implemented. This decision of making two different methods saved us from having to type lots of the same lines in every single Card subclass.
+-We decided to make color a protected variable in the superclass rather than only use it individually in each subclass because we realized we can get rid of a bit of extra code with this.
+-We added the instance var uno to a Player so we can determine whether or not the player has called uno and hence can win the game.
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 LESSONS LEARNED 
@@ -138,5 +140,12 @@ CJ :: Worked on everything!! Wohhoo lots of fun
       -added ending in Woo
       -Bugss!!
 AK :: Fixed problem with matching numbers not being played
+MT :: Worked in all classes
+      -cleaning up regarding terminal output
+      -added the call to Uno functionality
+      -resolved some bugs
+      -added a way for the game to end
+      -worked on small functionalities of cards like skipping over the player after a drawfour
+      Worked on the UML Diagrams and Flowchart
 ==============================================================
 
