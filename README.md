@@ -8,5 +8,5 @@
 ## *Launch Instructions*
 >###### 1. Open the terminal.
 >###### 2. Change directory to the directory containing the Old_MACdonald repository.
->###### 3. Compile Woo.java by typing the following in the terminal: *javac Woo.java*
->###### 4. Run Woo.java by typing the following in the terminal: *java Woo.java*
+>###### 3. javac Woo.java
+>###### 4. java Woo
