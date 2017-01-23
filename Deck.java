@@ -11,35 +11,39 @@ public class Deck {
 
     //instantiate Cards and put them in deckOfCards
     static {
-	for (String cardColor : COLORS) {
+	//doing this ten times will make it much less likely to draw a card twice
+	for (int z = 0; z < 10; z++) {
+	    
+	    for (String cardColor : COLORS) {
 
-	    //add Number Cards
-	    DECKOFCARDS.add(new Number(cardColor, 0));
-	    for (int i = 1; i < 10; i++) {
-		DECKOFCARDS.add(new Number(cardColor, i));
-		DECKOFCARDS.add(new Number(cardColor, i));
+		//add Number Cards
+		DECKOFCARDS.add(new Number(cardColor, 0));
+		for (int i = 1; i < 10; i++) {
+		    DECKOFCARDS.add(new Number(cardColor, i));
+		    DECKOFCARDS.add(new Number(cardColor, i));
+		}
+
+		//add DrawTwo
+		DECKOFCARDS.add(new DrawTwo(cardColor));
+		DECKOFCARDS.add(new DrawTwo(cardColor));
+
+		//add Skip
+		DECKOFCARDS.add(new Skip(cardColor));
+		DECKOFCARDS.add(new Skip(cardColor));
+
+		//add Reverse
+		DECKOFCARDS.add(new Reverse(cardColor));
+		DECKOFCARDS.add(new Reverse(cardColor));
 	    }
 
-	    //add DrawTwo
-	    DECKOFCARDS.add(new DrawTwo(cardColor));
-	    DECKOFCARDS.add(new DrawTwo(cardColor));
 
-	    //add Skip
-	    DECKOFCARDS.add(new Skip(cardColor));
-	    DECKOFCARDS.add(new Skip(cardColor));
-
-	    //add Reverse
-	    DECKOFCARDS.add(new Reverse(cardColor));
-	    DECKOFCARDS.add(new Reverse(cardColor));
-	}
-
-
-	for (int i = 0; i < 4; i++) {
-	    //add Wild
-	    DECKOFCARDS.add(new Wild());
+	    for (int i = 0; i < 4; i++) {
+		//add Wild
+		DECKOFCARDS.add(new Wild());
 	    
-	    //add DrawFour
-	    DECKOFCARDS.add(new DrawFour());
+		//add DrawFour
+		DECKOFCARDS.add(new DrawFour());
+	    }
 	}
 
     }//end static
